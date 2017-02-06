@@ -51,7 +51,7 @@ def expensePost():
     decision_date=''
     #code to generate random expense_id for each post request
     expense_id=randint(1000,9999)
-    engine = create_engine("mysql://root:bhushan@localhost")
+    engine = create_engine("mysql://root:password@localhost")
     engine.execute("CREATE DATABASE IF NOT EXISTS %s "%(DATABASE))
     engine.execute("USE %s "%(DATABASE))
     db.create_all()
