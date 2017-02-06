@@ -1,0 +1,9 @@
+
+Flask
+mysql
+request
+jsonify
+flask_sqlalchemy
+mysql-python
+sqlalchemy
+flask_script
