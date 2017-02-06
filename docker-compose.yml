@@ -1,0 +1,23 @@
+version: '2'
+services:
+  db:
+    volumes:
+      -".//data/db:/var/lib/mysql"
+      #restart : always
+      environment:
+        MYSQL_ROOT_PASSWORD: mypassword 
+        MYSQL_DATABASE: test-mysql
+        MYSQL_USER: root
+        MYSQL_PASSWORD: mypassword 
+
+
+  web:
+    depends_on:
+      - db 
+      build: .
+      links:
+        - db 
+      ports:
+        -"5000:5000"
+        # restart: always
+        
